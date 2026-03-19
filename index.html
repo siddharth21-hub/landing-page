@@ -715,9 +715,58 @@
     footer .f-links { display: flex; gap: 20px; }
 
     /* ── RESPONSIVE ── */
+    /* ── SERVICES GRID ── */
+    .services { padding: 96px 48px; max-width: 1100px; margin: 0 auto; }
+    .services > .section-label { text-align: center; margin-bottom: 20px; }
+    .services-heading { text-align: center; font-size: clamp(28px, 3.5vw, 42px); font-weight: 800; letter-spacing: -1.2px; line-height: 1.15; margin-bottom: 72px; }
+    .svc-group { margin-bottom: 60px; }
+    .svc-group-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--grey); padding-bottom: 14px; border-bottom: 1px solid var(--border); margin-bottom: 18px; }
+    .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .svc-grid.col-2 { grid-template-columns: repeat(2, 1fr); }
+    .svc-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 26px 24px; }
+    .svc-name { font-size: 15px; font-weight: 700; letter-spacing: -0.2px; margin-bottom: 10px; color: var(--black); }
+    .svc-desc { font-size: 14px; color: var(--muted); line-height: 1.8; }
+
+    /* ── IN ACTION ── */
+    .in-action { padding: 96px 48px; background: var(--off); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .in-action > .section-label { text-align: center; margin-bottom: 16px; }
+    .ia-heading { text-align: center; font-size: clamp(24px, 3vw, 38px); font-weight: 800; letter-spacing: -1px; line-height: 1.2; margin-bottom: 56px; }
+    .demo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto; }
+    .demo-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+    .demo-label { padding: 12px 20px; border-bottom: 1px solid var(--border); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); }
+    .demo-body { padding: 22px 20px; }
+    .mock-input-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #ccc9c6; margin-bottom: 8px; }
+    .mock-para { font-size: 13px; color: var(--muted); line-height: 1.6; padding: 12px 14px; border: 1px solid var(--border); border-radius: 8px; background: var(--off); font-style: italic; }
+    .mock-arrow { font-size: 12px; font-weight: 600; color: #ccc; text-align: center; padding: 12px 0; }
+    .mock-outputs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .mock-out-chip { padding: 8px 10px; border-radius: 8px; font-size: 12px; font-weight: 600; text-align: center; border: 1px solid var(--border); color: var(--black); background: var(--off); }
+    .mock-chat { display: flex; flex-direction: column; gap: 10px; }
+    .mock-msg { padding: 10px 14px; border-radius: 10px; font-size: 13px; line-height: 1.6; }
+    .mock-msg.user { background: var(--black); color: var(--white); align-self: flex-end; max-width: 85%; border-radius: 10px 10px 2px 10px; }
+    .mock-msg.ai { background: var(--off); color: var(--muted); border: 1px solid var(--border); max-width: 92%; border-radius: 10px 10px 10px 2px; }
+    .mock-source { font-size: 11px; color: #ccc; padding-left: 2px; }
+    .mock-before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .mock-ba-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px; }
+    .mock-ba-label.before { color: #f87171; }
+    .mock-ba-label.after { color: #4ade80; }
+    .mock-task { font-size: 12px; color: var(--muted); padding: 7px 0; border-bottom: 1px dashed var(--border); display: flex; justify-content: space-between; gap: 8px; }
+    .mock-task span { color: #f87171; font-size: 11px; white-space: nowrap; }
+    .mock-total { font-size: 11px; font-weight: 700; color: #f87171; margin-top: 10px; }
+    .mock-done { font-size: 13px; color: var(--muted); line-height: 1.65; padding: 12px; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; }
+    .mock-done strong { color: #16a34a; }
+    .mock-app { display: flex; flex-direction: column; gap: 10px; }
+    .mock-field-label { font-size: 11px; font-weight: 600; color: var(--muted); margin-bottom: 4px; }
+    .mock-select { padding: 9px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 13px; color: var(--black); background: var(--white); }
+    .mock-result { margin-top: 6px; padding: 14px 16px; background: var(--black); border-radius: 10px; display: flex; justify-content: space-between; align-items: center; }
+    .mock-result-label { font-size: 11px; color: #666; font-weight: 600; }
+    .mock-result-val { font-size: 17px; font-weight: 800; color: var(--white); letter-spacing: -0.5px; }
+
     @media (max-width: 900px) {
       .for-who-grid { grid-template-columns: 1fr; }
       .process-steps { grid-template-columns: 1fr; }
+      .svc-grid { grid-template-columns: repeat(2, 1fr); }
+      .svc-grid.col-2 { grid-template-columns: repeat(2, 1fr); }
+      .demo-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 640px) {
@@ -727,8 +776,12 @@
       .contact-row { flex-direction: column; align-items: stretch; }
       .contact-row input { width: 100%; }
       .for-who { padding: 72px 20px; }
-      .what { padding: 72px 20px; }
-      .what-row { grid-template-columns: 1fr; gap: 10px 0; }
+      .services { padding: 72px 20px; }
+      .in-action { padding: 72px 20px; }
+      .svc-grid { grid-template-columns: 1fr; }
+      .svc-grid.col-2 { grid-template-columns: 1fr; }
+      .demo-grid { grid-template-columns: 1fr; }
+      .mock-before-after { grid-template-columns: 1fr; }
       .process { padding: 72px 20px; }
       .proof { padding: 72px 20px; }
       .proof-stats { flex-direction: column; width: 100%; max-width: 280px; }
@@ -763,16 +816,12 @@
 <!-- HERO -->
 <div class="hero-wrap">
 <section class="hero">
-  <div class="hero-badge">
-    <span class="dot"></span>
-    Available for new work
-  </div>
   <h1>
-    Your ideas,<br>
-    <span class="dim">built and published.</span>
+    The work you<br>
+    <span class="dim">never get to.</span>
   </h1>
   <p class="hero-sub">
-    I work with founders who have more to say than time to say it, and with businesses where too much still runs on memory and manual work.
+    Content, automation, AI knowledge systems, research, websites, and web apps. Across six areas, I handle the parts of your business that stay at the bottom of the list.
   </p>
   <div class="contact-row">
     <input type="email" id="hero-email" placeholder="Your email address">
@@ -832,50 +881,222 @@
   </div>
 </section>
 
-<!-- WHAT I DO -->
-<section class="what">
+<!-- SERVICES -->
+<section class="services">
   <p class="section-label">What I do</p>
+  <h2 class="services-heading">Every service, explained plainly.</h2>
 
-  <div class="what-row">
-    <div>
-      <p class="what-num">01</p>
-      <p class="what-title">Content Pipeline</p>
+  <div class="svc-group">
+    <p class="svc-group-label">Content &amp; Publishing</p>
+    <div class="svc-grid col-2">
+      <div class="svc-card">
+        <p class="svc-name">Content Pipeline</p>
+        <p class="svc-desc">You give me a topic. By the next morning it is a LinkedIn post, an Instagram carousel, a Substack draft, and a Twitter thread, each formatted, captioned, and ready to publish. You read and post. Nothing else.</p>
+      </div>
+      <div class="svc-card">
+        <p class="svc-name">Brand Voice System</p>
+        <p class="svc-desc">If three different people write for your brand, readers can tell. I build a structured guide with examples, rules, and tone markers, so that anyone writing for your brand, including AI, sounds like the same person every time.</p>
+      </div>
     </div>
-    <p class="what-right">You give me a topic. By the next morning it is a <strong>LinkedIn post, an Instagram carousel, a Substack draft, and a Twitter thread</strong>, each formatted, captioned, and ready to publish. You read and post. Nothing else.</p>
   </div>
 
-  <div class="what-row">
-    <div>
-      <p class="what-num">02</p>
-      <p class="what-title">Workflow Automation</p>
+  <div class="svc-group">
+    <p class="svc-group-label">AI &amp; Knowledge</p>
+    <div class="svc-grid col-2">
+      <div class="svc-card">
+        <p class="svc-name">Custom Knowledge Base</p>
+        <p class="svc-desc">You have a pile of documents: reports, SOPs, old emails, product catalogues. I organise all of it into a system where you can ask a question in plain language and get the right answer instantly. Like a well-read assistant who has read everything you have ever written.</p>
+      </div>
+      <div class="svc-card">
+        <p class="svc-name">AI Workflow Integration</p>
+        <p class="svc-desc">Your team has a way of working that already functions. I plug AI tools into the parts of the process that eat up time: drafting, summarising, sorting, responding. Your team does the same work in half the time without learning a new system.</p>
+      </div>
     </div>
-    <p class="what-right">Every business has work that repeats on a schedule: reports pulled from the same place, data moved from one sheet to another, summaries written the same way every time. <strong>I find those tasks and take them off the calendar</strong> permanently.</p>
   </div>
 
-  <div class="what-row">
-    <div>
-      <p class="what-num">03</p>
-      <p class="what-title">Knowledge Base</p>
+  <div class="svc-group">
+    <p class="svc-group-label">Research &amp; Documents</p>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <p class="svc-name">Large Document Summarisation</p>
+        <p class="svc-desc">You have a 200-page report, a legal contract, or a research paper that needs to be understood quickly. I extract what actually matters for your specific purpose and deliver a clear summary with the key points and recommended actions. No reading the whole thing required.</p>
+      </div>
+      <div class="svc-card">
+        <p class="svc-name">Multi-source Research</p>
+        <p class="svc-desc">Information is spread across ten different documents or sources. Some agree, some contradict, some are outdated. I analyse all of them together and surface the patterns, the gaps, and the conclusions that are not obvious from reading any one of them individually.</p>
+      </div>
+      <div class="svc-card">
+        <p class="svc-name">Technical Simplification</p>
+        <p class="svc-desc">You have content written for experts (technical documentation, legal language, academic writing, compliance material) that regular people cannot make sense of. I rewrite it in plain language without losing the accuracy. The idea stays the same. The words become readable.</p>
+      </div>
     </div>
-    <p class="what-right">Your documents, contracts, SOPs, and records, organised into a system where <strong>you ask a question in plain language and get the answer in seconds</strong>. No searching through folders. No chasing down the person who remembers.</p>
   </div>
 
-  <div class="what-row">
-    <div>
-      <p class="what-num">04</p>
-      <p class="what-title">Document Analysis</p>
+  <div class="svc-group">
+    <p class="svc-group-label">Automation &amp; Scripting</p>
+    <div class="svc-grid col-2">
+      <div class="svc-card">
+        <p class="svc-name">Workflow Automation</p>
+        <p class="svc-desc">Every business has tasks that repeat on a schedule: reports sent, data moved from one place to another, summaries generated the same way every week. I find those tasks and build a system that handles them automatically. You stop doing the repetitive parts.</p>
+      </div>
+      <div class="svc-card">
+        <p class="svc-name">Spreadsheet Automation</p>
+        <p class="svc-desc">You have an Excel or Google Sheet that someone spends hours updating manually every week. I set it up so calculations run, reports generate, and data sorts itself, without anyone touching it.</p>
+      </div>
+      <div class="svc-card">
+        <p class="svc-name">WhatsApp Business Automation</p>
+        <p class="svc-desc">When a customer messages your WhatsApp Business number at 2am asking about your product, they get an instant, accurate reply without you waking up. Catalogue sent, follow-ups scheduled, common questions answered. You only step in for conversations that actually need a human.</p>
+      </div>
+      <div class="svc-card">
+        <p class="svc-name">Data Scraping</p>
+        <p class="svc-desc">There is publicly available data on the internet that would be useful to you: competitor pricing, market listings, contact information from directories. Instead of manually copying it one entry at a time, I build a tool that pulls it automatically and delivers it as a clean, organised spreadsheet.</p>
+      </div>
     </div>
-    <p class="what-right">Long reports, legal contracts, research papers, financial filings. I go through them, pull out what matters for your specific decision, and deliver <strong>a clear summary with the parts that actually require action</strong>.</p>
   </div>
 
-  <div class="also-row">
-    <span class="also-label">Also</span>
-    <span class="also-chip">Brand Voice Systems</span>
-    <span class="also-chip">Spreadsheet Automation</span>
-    <span class="also-chip">Multi-source Research</span>
-    <span class="also-chip">Technical Simplification</span>
-    <span class="also-chip">AI Tool Integration</span>
-    <span class="also-chip">Data Dashboards</span>
+  <div class="svc-group">
+    <p class="svc-group-label">Websites &amp; Web Pages</p>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <p class="svc-name">Full Multi-page Websites</p>
+        <p class="svc-desc">A complete website with home, about, services, and contact pages, all linked and working. Someone searches for you, they find a professional online presence that explains who you are and what you do. Built, not purchased from a template platform.</p>
+      </div>
+      <div class="svc-card">
+        <p class="svc-name">Landing Pages</p>
+        <p class="svc-desc">One focused page designed to do one thing: get the visitor to take an action. Sign up. Book a call. Buy the product. No distractions, no menus, no noise. Just the offer and the button.</p>
+      </div>
+      <div class="svc-card">
+        <p class="svc-name">Portfolio &amp; Showcase Sites</p>
+        <p class="svc-desc">A professional space online where your work speaks for you. Clients, employers, or collaborators visit and immediately see what you have done, what you are capable of, and how to reach you.</p>
+      </div>
+      <div class="svc-card">
+        <p class="svc-name">E-commerce &amp; Online Stores</p>
+        <p class="svc-desc">Your products online with a working payment system. Customers browse, select, pay, and receive confirmation, all without you manually handling each order. Your own store, your own prices, your own control. Not a link to a marketplace.</p>
+      </div>
+      <div class="svc-card">
+        <p class="svc-name">Interactive UI Mockups</p>
+        <p class="svc-desc">Before building an app or website properly, you get a working visual demo of how it will look and function. You can click buttons, navigate screens, see the layout. Test the idea and request changes before any serious development begins.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="svc-group">
+    <p class="svc-group-label">Web Applications</p>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <p class="svc-name">Calculators &amp; Quote Generators</p>
+        <p class="svc-desc">A tool on your website where a visitor enters a few details like project size, number of users, and timeframe, and instantly gets an estimate or price. No back-and-forth emails. No waiting. The tool does the first qualification for you.</p>
+      </div>
+      <div class="svc-card">
+        <p class="svc-name">Booking &amp; Appointment Systems</p>
+        <p class="svc-desc">A page where your clients can see your availability and book time with you directly, without going back and forth over WhatsApp or email to find a slot that works for both sides.</p>
+      </div>
+      <div class="svc-card">
+        <p class="svc-name">Client Portals</p>
+        <p class="svc-desc">A private, password-protected area where each of your clients can log in and see only their files, reports, invoices, and project updates. Clean, professional, and separate from your own working folders.</p>
+      </div>
+      <div class="svc-card">
+        <p class="svc-name">Inventory &amp; Invoice Tools</p>
+        <p class="svc-desc">Internal tools built specifically for how your business runs: track stock, generate invoices automatically, send them to the right people. Replaces the combination of WhatsApp, Excel, and memory that most small businesses currently run on.</p>
+      </div>
+      <div class="svc-card">
+        <p class="svc-name">Data Dashboards</p>
+        <p class="svc-desc">A live screen that shows you the numbers that matter: sales today, leads this week, which product is moving, which is not. All updated automatically from your actual data source. You open it and you know where things stand.</p>
+      </div>
+      <div class="svc-card">
+        <p class="svc-name">API Integrations</p>
+        <p class="svc-desc">Making your website or app talk to other services: payment gateways, Google Maps, WhatsApp, booking platforms. When someone pays on your site, it goes through automatically. When someone fills a form, it appears in your CRM. Nothing manual in between.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="svc-group">
+    <p class="svc-group-label">Code &amp; Technical</p>
+    <div class="svc-grid col-2">
+      <div class="svc-card">
+        <p class="svc-name">Legacy Code Refactoring</p>
+        <p class="svc-desc">Old code that works but no one fully understands anymore. Adding anything new breaks something else. I clean it up. Same functionality, same results, but written in a way that is clear, structured, and safe to build on top of.</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- IN ACTION -->
+<section class="in-action">
+  <p class="section-label">See it in action</p>
+  <h2 class="ia-heading">What the output actually looks like.</h2>
+  <div class="demo-grid">
+
+    <div class="demo-card">
+      <div class="demo-label">Content Pipeline</div>
+      <div class="demo-body">
+        <p class="mock-input-label">You give me</p>
+        <div class="mock-para">"Leonardo da Vinci spent the last years of his life paralysed by the gap between what he could imagine and what he could actually execute..."</div>
+        <div class="mock-arrow">↓ &nbsp; by tomorrow morning</div>
+        <div class="mock-outputs">
+          <div class="mock-out-chip">LinkedIn Post ✓</div>
+          <div class="mock-out-chip">Instagram Carousel ✓</div>
+          <div class="mock-out-chip">Substack Draft ✓</div>
+          <div class="mock-out-chip">Twitter Thread ✓</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-card">
+      <div class="demo-label">Knowledge Base</div>
+      <div class="demo-body">
+        <div class="mock-chat">
+          <div class="mock-msg user">What does our vendor contract say about penalty clauses?</div>
+          <div class="mock-msg ai">Based on your vendor agreement (Clause 8.3), penalties apply when delivery exceeds 14 days. The maximum cap is 15% of the contract value. Force majeure events are exempt.</div>
+          <p class="mock-source">↑ Source: vendor-agreement-2024.pdf</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-card">
+      <div class="demo-label">Workflow Automation</div>
+      <div class="demo-body">
+        <div class="mock-before-after">
+          <div>
+            <p class="mock-ba-label before">Before</p>
+            <div class="mock-task">Pull last week's sales data <span>~40 min</span></div>
+            <div class="mock-task">Update the summary sheet <span>~25 min</span></div>
+            <div class="mock-task">Email report to team <span>~10 min</span></div>
+            <p class="mock-total">Every Monday: 75 minutes</p>
+          </div>
+          <div>
+            <p class="mock-ba-label after">After</p>
+            <div class="mock-done">Report arrives in everyone's inbox automatically at 8am every Monday. <strong>0 minutes.</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-card">
+      <div class="demo-label">Web Application: Quote Calculator</div>
+      <div class="demo-body">
+        <div class="mock-app">
+          <div>
+            <p class="mock-field-label">Project type</p>
+            <div class="mock-select">E-commerce store &nbsp;▾</div>
+          </div>
+          <div>
+            <p class="mock-field-label">Number of products</p>
+            <div class="mock-select">51–200 products &nbsp;▾</div>
+          </div>
+          <div>
+            <p class="mock-field-label">Payment integration</p>
+            <div class="mock-select">Yes, Razorpay &nbsp;▾</div>
+          </div>
+          <div class="mock-result">
+            <span class="mock-result-label">Estimated range</span>
+            <span class="mock-result-val">₹45,000 – ₹75,000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -940,7 +1161,7 @@
 
   <div class="faq-item">
     <p class="faq-q">Is this only for content creation?<span class="faq-icon">+</span></p>
-    <p class="faq-a">Content is the lead service because it is the most visible result. But most of my work is about removing friction from how a business already operates — repetitive tasks, document overload, scattered information. If something in your workflow is consistently slowing you down, that is worth a conversation.</p>
+    <p class="faq-a">Content is the lead service because it is the most visible result. But most of my work is about removing friction from how a business already operates: repetitive tasks, document overload, scattered information. If something in your workflow is consistently slowing you down, that is worth a conversation.</p>
   </div>
 
   <div class="faq-item">

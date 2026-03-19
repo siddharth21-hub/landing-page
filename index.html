@@ -716,16 +716,19 @@
 
     /* ── RESPONSIVE ── */
     /* ── SERVICES GRID ── */
-    .services { padding: 96px 48px; max-width: 1100px; margin: 0 auto; }
-    .services > .section-label { text-align: center; margin-bottom: 20px; }
+    .services { background: var(--off); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); counter-reset: svc-counter; }
+    .services-inner { padding: 96px 48px; max-width: 1100px; margin: 0 auto; }
+    .services-inner > .section-label { text-align: center; margin-bottom: 20px; }
     .services-heading { text-align: center; font-size: clamp(28px, 3.5vw, 42px); font-weight: 800; letter-spacing: -1.2px; line-height: 1.15; margin-bottom: 72px; }
-    .svc-group { margin-bottom: 60px; }
-    .svc-group-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--grey); padding-bottom: 14px; border-bottom: 1px solid var(--border); margin-bottom: 18px; }
-    .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .svc-group { margin-bottom: 64px; }
+    .svc-group-label { font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--black); padding-bottom: 14px; border-bottom: 1px solid #c8c6c2; margin-bottom: 20px; }
+    .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
     .svc-grid.col-2 { grid-template-columns: repeat(2, 1fr); }
-    .svc-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 26px 24px; }
-    .svc-name { font-size: 15px; font-weight: 700; letter-spacing: -0.2px; margin-bottom: 10px; color: var(--black); }
-    .svc-desc { font-size: 14px; color: var(--muted); line-height: 1.8; }
+    .svc-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 28px 26px; position: relative; transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; counter-increment: svc-counter; }
+    .svc-card::before { content: counter(svc-counter, decimal-leading-zero); position: absolute; top: 22px; right: 22px; font-size: 10px; font-weight: 700; letter-spacing: 1px; color: #dddbd9; }
+    .svc-card:hover { transform: translateY(-3px); border-color: #c5c3c0; box-shadow: 0 10px 28px rgba(0,0,0,0.08); }
+    .svc-name { font-size: 15px; font-weight: 700; letter-spacing: -0.2px; margin-bottom: 10px; color: var(--black); padding-right: 32px; }
+    .svc-desc { font-size: 14px; color: var(--muted); line-height: 1.85; }
 
     /* ── IN ACTION ── */
     .in-action { padding: 96px 48px; background: var(--off); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
@@ -776,7 +779,7 @@
       .contact-row { flex-direction: column; align-items: stretch; }
       .contact-row input { width: 100%; }
       .for-who { padding: 72px 20px; }
-      .services { padding: 72px 20px; }
+      .services-inner { padding: 72px 20px; }
       .in-action { padding: 72px 20px; }
       .svc-grid { grid-template-columns: 1fr; }
       .svc-grid.col-2 { grid-template-columns: 1fr; }
@@ -883,6 +886,7 @@
 
 <!-- SERVICES -->
 <section class="services">
+<div class="services-inner">
   <p class="section-label">What I do</p>
   <h2 class="services-heading">Every service, explained plainly.</h2>
 
@@ -1020,6 +1024,7 @@
     </div>
   </div>
 
+</div>
 </section>
 
 <!-- IN ACTION -->
